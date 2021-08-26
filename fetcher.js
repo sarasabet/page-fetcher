@@ -8,6 +8,7 @@ request(url, (error, response, body) => {
   console.log('error', error);
   console.log('statusCode;', response && response.statusCode);
   writeOnfilles(body)
+
 })
 
 const writeOnfilles = (content) => {
@@ -16,7 +17,8 @@ const writeOnfilles = (content) => {
       console.error(err)
       return
     }
-    console.log("file written successfully")
+    console.log(`File written successfull, file size is ${content.length}.`)
+
   })
 };  
 
